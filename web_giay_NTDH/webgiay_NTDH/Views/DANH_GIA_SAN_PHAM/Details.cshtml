@@ -1,0 +1,58 @@
+﻿@model webgiay_NTDH.Models.DANH_GIA_SAN_PHAM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DANH_GIA_SAN_PHAM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Diem_danh_gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diem_danh_gia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nhan_xet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nhan_xet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngay_danh_gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngay_danh_gia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KHACH_HANG.Ho_ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KHACH_HANG.Ho_ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SAN_PHAM.Ten_san_pham)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SAN_PHAM.Ten_san_pham)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,131 @@
+﻿@model IEnumerable<webgiay_NTDH.Models.SAN_PHAM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    /* Phong cách cơ bản cho bảng */
+    .table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+    }
+
+        /* Tiêu đề bảng */
+        .table th {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 2px solid #ddd;
+        }
+
+        /* Dữ liệu bảng */
+        .table td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Hiệu ứng khi di chuột lên hàng */
+        .table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+    /* Thiết kế chung cho tất cả các nút */
+    .btn {
+        color: white;
+        font-weight: bold;
+        padding: 8px 16px;
+        border: 2px solid;
+        border-radius: 15px;
+        text-decoration: none;
+        transition: all 0.3s;
+        display: inline-block;
+        margin: 0 5px;
+    }
+
+    /* Nút "Thêm mới" */
+    .btn-create {
+        background-color: #28a745; /* Màu xanh lá */
+        border-color: #28a745;
+    }
+
+        .btn-create:hover {
+            background-color: #218838;
+            border-color: #218838;
+        }
+
+    /* Nút "Sửa" */
+    .btn-edit {
+        background-color: #ffc107; /* Màu vàng */
+        border-color: #ffc107;
+    }
+
+        .btn-edit:hover {
+            background-color: #e0a800;
+            border-color: #e0a800;
+        }
+
+    /* Nút "Xóa" */
+    .btn-delete {
+        background-color: #dc3545; /* Màu đỏ */
+        border-color: #dc3545;
+    }
+
+        .btn-delete:hover {
+            background-color: #c82333;
+            border-color: #c82333;
+        }
+
+    /* Nút "Details" */
+    .btn-details {
+        background-color: #007bff; /* Màu xanh dương */
+        border-color: #007bff;
+    }
+
+        .btn-details:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+</style>
+
+<h2>Sản phẩm</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-create" })
+</p>
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Ten_san_pham)</th>
+        <th>@Html.DisplayNameFor(model => model.Mo_ta)</th>
+        <th>@Html.DisplayNameFor(model => model.So_luong_ton_kho)</th>
+        <th>@Html.DisplayNameFor(model => model.Thuong_hieu)</th>
+        <th>@Html.DisplayNameFor(model => model.Hinh_anh)</th>
+        <th>@Html.DisplayNameFor(model => model.Mau)</th>
+        <th>@Html.DisplayNameFor(model => model.Kich_thuoc)</th>
+        <th>@Html.DisplayNameFor(model => model.Gia)</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Ten_san_pham)</td>
+            <td>@Html.DisplayFor(modelItem => item.Mo_ta)</td>
+            <td>@Html.DisplayFor(modelItem => item.So_luong_ton_kho)</td>
+            <td>@Html.DisplayFor(modelItem => item.Thuong_hieu)</td>
+            <td>@Html.DisplayFor(modelItem => item.Hinh_anh)</td>
+            <td>@Html.DisplayFor(modelItem => item.Mau)</td>
+            <td>@Html.DisplayFor(modelItem => item.Kich_thuoc)</td>
+            <td>@Html.DisplayFor(modelItem => item.Gia)</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }, new { @class = "btn btn-edit" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ProductID }, new { @class = "btn btn-details" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ProductID }, new { @class = "btn btn-delete" })
+            </td>
+        </tr>
+    }
+</table>

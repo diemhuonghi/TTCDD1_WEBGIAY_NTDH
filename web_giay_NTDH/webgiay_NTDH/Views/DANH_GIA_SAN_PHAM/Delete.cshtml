@@ -1,0 +1,64 @@
+﻿@model webgiay_NTDH.Models.DANH_GIA_SAN_PHAM
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DANH_GIA_SAN_PHAM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Diem_danh_gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diem_danh_gia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nhan_xet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nhan_xet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngay_danh_gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngay_danh_gia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KHACH_HANG.Ho_ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KHACH_HANG.Ho_ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SAN_PHAM.Ten_san_pham)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SAN_PHAM.Ten_san_pham)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
