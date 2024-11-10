@@ -10,7 +10,7 @@ namespace webgiay_NTDH.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View();// Trả về View Index trong thư mục Views/Home
         }
 
         public ActionResult About()

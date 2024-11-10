@@ -1,31 +1,188 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewData["Title"] = "Trang Chủ";
 }
+<style>
+    /* Thanh điều hướng */
+    nav ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        background-color: #333;
+    }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+            }
+
+    /* Banner chính */
+    .hero {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            color: #fff;
+            margin-top: -50px;
+        }
+
+        .hero .cta-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0094ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+    /* Sản phẩm nổi bật */
+    .featured-products {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+        .featured-products h2 {
+            font-size: 2em;
+        }
+
+    .products {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .product {
+        width: 200px;
+        text-align: center;
+    }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product .btn {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+    /* Danh mục sản phẩm */
+    .product-categories {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+        .product-categories ul {
+            list-style: none;
+            padding: 0;
+        }
+
+            .product-categories ul li {
+                display: inline-block;
+                margin: 0 20px;
+            }
+
+                .product-categories ul li a {
+                    text-decoration: none;
+                    color: #007bff;
+                    font-size: 1.2em;
+                }
+
+    /* Chân trang */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+    }
+
+</style>
+
+<!-- Banner chính -->
+<section class="hero">
+    <img src="~/Content/imgs/Screenshot 2024-11-08 183402.png" alt="Giày đẹp" style="width:100%; height: 100%;">
+</section>
+
+<!-- Sản phẩm nổi bật -->
+<section class="featured-products">
+    <h2>Sản Phẩm Nổi Bật</h2>
+    <div class="products">
+        <!-- Sản phẩm 1 -->
+        <div class="product">
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d94b946f-2d81-4d31-9be5-df431b8b3d97/WMNS+AIR+JORDAN+LEGACY+312+LOW.png"
+                 alt="Giày 1" style="width: 100%;">
+            <h3>Air Jordan Legacy 312 Low</h3>
+            <p>4,109,000VND</p>
+            <a href="/Home/ProductDetails/2" class="btn">Xem chi tiết</a>
+        </div>
+        <!-- Sản phẩm 2 -->
+        <div class="product">
+            <img src="https://www.peltzshoes.com/cdn/shop/files/DM7590-100_Womens-Nike-Court-Legacy-Lift-White-Black-Hemp-White-Black-Hemp.jpg?v=1730210664"
+                 alt="Giày 2" style="width: 100%;">
+            <h3> Nike Air</h3>
+            <p>1.000.000 VND</p>
+            <a href="/Home/ProductDetails/1" class="btn">Xem chi tiết</a>
+        </div>
+        <!-- Sản phẩm 3 -->
+        <div class="product">
+            <img src="https://cdn.media.amplience.net/s/scvl/103699_302291_SET/1?fmt=auto&$webPdpProduct$"
+                 alt="Giày 3" style="width: 100%;">
+            <h3>Women's Nike Air</h3>
+            <p>800.000 VND</p>
+            <a href="/Home/ProductDetails/2" class="btn">Xem chi tiết</a>
+        </div>
+        <!-- Sản phẩm 4-->
+        <div class="product">
+            <img src="https://cdn.staticsaa.com/uploads/84795/cart/resources/20240925/90B2999C-0078-EE2F-E9A3-FDBF3B1C671F.png"
+                 alt="Giày 4" style="width: 100%;">
+            <h3> Nike Air Force 1 Basketball</h3>
+            <p>2.200.000 VND</p>
+            <a href="/Home/ProductDetails/2" class="btn">Xem chi tiết</a>
+        </div>
+        <!-- Sản phẩm 5 -->
+        <div class="product">
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/fa1bceaf-21bc-44b5-853b-33eac3c34e2b/WMNS+NIKE+P-6000.png"
+                 alt="Giày 5" style="width: 100%;">
+            <h3>Nike P-6000</h3>
+            <p>3,239,000 VND</p>
+            <a href="/Home/ProductDetails/2" class="btn">Xem chi tiết</a>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+</section>
+
+<!-- Danh mục sản phẩm -->
+<section class="product-categories">
+    <h2>Danh Mục Sản Phẩm</h2>
+    <ul>
+        <li><a href="/Home/Category/Sport">Giày Thể Thao</a></li>
+        <li><a href="/Home/Category/Formal">Giày Công Sở</a></li>
+        <li><a href="/Home/Category/Women">Giày Nữ</a></li>
+        <li><a href="/Home/Category/Kids">Giày Trẻ Em</a></li>
+    </ul>
+</section>
+
+<!-- Chân trang -->
+<footer>
+    <p> Liên hệ với chúng tôi: email: huongntd1810@gmail.com</p>
+    <p>instagram: Dym.huowng_</p>
+    <p> Điện Thoại: 0383520274 </p>
+    <p> Địa chỉ: Xóm 18, Quỳnh Vinh, Thị Xã Hoàng Mai, Tỉnh Nghệ An</p>
+    
+</footer>

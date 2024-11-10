@@ -5,12 +5,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="70e9bddcdef5491e94e8dfaa24c73eec" Name="Diagram1">
-        <EntityTypeShape EntityType="ntdh__webModel.DANH_GIA_SAN_PHAM" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ntdh__webModel.DON_HANG" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ntdh__webModel.KHACH_HANG" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ntdh__webModel.QUAN_TRI" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ntdh__webModel.SAN_PHAM" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ntdh__webModel.sysdiagram" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ntdh__webModel.DANH_GIA_SAN_PHAM" Width="1.5" PointX="3.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ntdh__webModel.DON_HANG" Width="1.5" PointX="3.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ntdh__webModel.KHACH_HANG" Width="1.5" PointX="1" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ntdh__webModel.QUAN_TRI" Width="1.5" PointX="7.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ntdh__webModel.SAN_PHAM" Width="1.5" PointX="6" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ntdh__webModel.sysdiagram" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="ntdh__webModel.FK__DANH_GIA___custo__1FCDBCEB" ManuallyRouted="false" />
         <AssociationConnector Association="ntdh__webModel.FK__DANH_GIA___Produ__1ED998B2" ManuallyRouted="false" />
         <AssociationConnector Association="ntdh__webModel.FK__DON_HANG__custom__1B0907CE" ManuallyRouted="false" />

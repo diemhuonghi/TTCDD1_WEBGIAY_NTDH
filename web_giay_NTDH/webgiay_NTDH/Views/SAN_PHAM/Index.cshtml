@@ -3,7 +3,6 @@
 @{
     ViewBag.Title = "Index";
 }
-
 <style>
     /* Phong cách cơ bản cho bảng */
     .table {
@@ -57,75 +56,88 @@
             border-color: #218838;
         }
 
-    /* Nút "Sửa" */
+    /* Nút "mua hàng" */
     .btn-edit {
-        background-color: #ffc107; /* Màu vàng */
-        border-color: #ffc107;
+        background-color: #0094ff; /* Màu xanh */
+        color: #ffffff; /* Màu chữ trắng */
+        border: none; /* Không có viền */
+        border-radius: 8px; /* Bo góc nhẹ */
+        padding: 10px 20px; /* Khoảng cách trong nút */
+        font-weight: bold; /* Chữ đậm */
+        cursor: pointer; /* Con trỏ tay khi di chuột qua */
     }
 
         .btn-edit:hover {
-            background-color: #e0a800;
-            border-color: #e0a800;
+            background-color: #e0a800; /* Màu vàng khi hover */
+            color: #ffffff; /* Màu chữ trắng */
         }
 
-    /* Nút "Xóa" */
-    .btn-delete {
-        background-color: #dc3545; /* Màu đỏ */
-        border-color: #dc3545;
-    }
-
-        .btn-delete:hover {
-            background-color: #c82333;
-            border-color: #c82333;
-        }
-
-    /* Nút "Details" */
-    .btn-details {
-        background-color: #007bff; /* Màu xanh dương */
-        border-color: #007bff;
-    }
-
-        .btn-details:hover {
-            background-color: #0056b3;
-            border-color: #0056b3;
-        }
 </style>
-
-<h2>Sản phẩm</h2>
+<h2>Sản Phẩm</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-create" })
+    @Html.ActionLink("Create New", "Create")
 </p>
-
 <table class="table">
     <tr>
-        <th>@Html.DisplayNameFor(model => model.Ten_san_pham)</th>
-        <th>@Html.DisplayNameFor(model => model.Mo_ta)</th>
-        <th>@Html.DisplayNameFor(model => model.So_luong_ton_kho)</th>
-        <th>@Html.DisplayNameFor(model => model.Thuong_hieu)</th>
-        <th>@Html.DisplayNameFor(model => model.Hinh_anh)</th>
-        <th>@Html.DisplayNameFor(model => model.Mau)</th>
-        <th>@Html.DisplayNameFor(model => model.Kich_thuoc)</th>
-        <th>@Html.DisplayNameFor(model => model.Gia)</th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ten_san_pham)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mo_ta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.So_luong_ton_kho)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Thuong_hieu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hinh_anh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mau)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kich_thuoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gia)
+        </th>
         <th></th>
     </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@Html.DisplayFor(modelItem => item.Ten_san_pham)</td>
-            <td>@Html.DisplayFor(modelItem => item.Mo_ta)</td>
-            <td>@Html.DisplayFor(modelItem => item.So_luong_ton_kho)</td>
-            <td>@Html.DisplayFor(modelItem => item.Thuong_hieu)</td>
-            <td>@Html.DisplayFor(modelItem => item.Hinh_anh)</td>
-            <td>@Html.DisplayFor(modelItem => item.Mau)</td>
-            <td>@Html.DisplayFor(modelItem => item.Kich_thuoc)</td>
-            <td>@Html.DisplayFor(modelItem => item.Gia)</td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }, new { @class = "btn btn-edit" }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ProductID }, new { @class = "btn btn-details" }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ProductID }, new { @class = "btn btn-delete" })
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ten_san_pham)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mo_ta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.So_luong_ton_kho)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Thuong_hieu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hinh_anh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mau)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kich_thuoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gia)
+        </td>
+        
+        <td >
+            <a class="btn-edit" href="/cart/AddToCart/?productId=@item.ProductID&productName=@item.Ten_san_pham&price=@item.Gia">Mua hàng</a>
             </td>
-        </tr>
-    }
+    </tr>
+}
+
 </table>

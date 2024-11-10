@@ -99,29 +99,29 @@
 
 <table class="table">
     <tr>
+                <th>@Html.DisplayNameFor(model => model.Ma_theo_doi)</th>
         <th>@Html.DisplayNameFor(model => model.Ngay_dat_hang)</th>
+        <th>@Html.DisplayNameFor(model => model.KHACH_HANG.Ho_ten)</th>
         <th>@Html.DisplayNameFor(model => model.Tong_tien)</th>
         <th>@Html.DisplayNameFor(model => model.Dia_chi)</th>
         <th>@Html.DisplayNameFor(model => model.Phuong_thuc_thanh_toan)</th>
-        <th>@Html.DisplayNameFor(model => model.Ma_theo_doi)</th>
-        <th>@Html.DisplayNameFor(model => model.KHACH_HANG.Ho_ten)</th>
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>@Html.DisplayFor(modelItem => item.Ngay_dat_hang)</td>
-            <td>@Html.DisplayFor(modelItem => item.Tong_tien)</td>
-            <td>@Html.DisplayFor(modelItem => item.Dia_chi)</td>
-            <td>@Html.DisplayFor(modelItem => item.Phuong_thuc_thanh_toan)</td>
-            <td>@Html.DisplayFor(modelItem => item.Ma_theo_doi)</td>
-            <td>@Html.DisplayFor(modelItem => item.KHACH_HANG.Ho_ten)</td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.OrderID }, new { @class = "btn btn-edit" }) |
-                @Html.ActionLink("Details", "Details", new { id = item.OrderID }, new { @class = "btn btn-details" }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.OrderID }, new { @class = "btn btn-delete" })
-            </td>
-        </tr>
+<tr>
+    <td>@Html.DisplayFor(modelItem => item.Ma_theo_doi)</td>
+    <td>@Html.DisplayFor(modelItem => item.Ngay_dat_hang)</td>
+    <td>@Html.DisplayFor(modelItem => item.KHACH_HANG.Ho_ten)</td>
+    <td>@Html.DisplayFor(modelItem => item.Tong_tien)</td>
+    <td>@Html.DisplayFor(modelItem => item.Dia_chi)</td>
+    <td>@Html.DisplayFor(modelItem => item.Phuong_thuc_thanh_toan)</td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.OrderID }, new { @class = "btn btn-edit" }) |
+        @Html.ActionLink("Details", "Details", new { id = item.OrderID }, new { @class = "btn btn-details" }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.OrderID }, new { @class = "btn btn-delete" })
+    </td>
+</tr>
     }
 </table>
